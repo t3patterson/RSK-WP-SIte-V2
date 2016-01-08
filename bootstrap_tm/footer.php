@@ -8,7 +8,7 @@
         <div class="col-xs-12 col-sm-6 col-md-7">
           <?php if ( dynamic_sidebar('footer-company') ); ?>
         </div>
-        <div class="col-xs-12 col-sm-6 col-md-5"></div>
+        <div class="col-xs-12 col-sm-6 col-md-5">
           <?php 
             $args=[
               'menu' => 'footer-menu',
@@ -19,7 +19,7 @@
           ?>
         </div>
       </div>
-    </div>
+    </div>  
   </footer> 
   <?php wp_footer();   ?>
 </body>

@@ -27,6 +27,16 @@ body{
   font-family: 'Helvetica Neue', 'Helvetica', 'sans-serif';
 }
 
+main {
+  background: url('../images/bg-single-derrick.png') 0% 100% no-repeat fixed;
+  background-size: cover;
+
+  > .container,
+  > .container-fluid {
+    background: #fff;
+  }
+}
+
 /*Universal Mobile*/
 $main_content_top_padding__mobile: 66px;
 
@@ -36,12 +46,18 @@ main#content-wrapper {
 
 /*--- PHP-Wordpress Admin Styles  ---*/
 
-body.admin-bar{
-  $admin_adjust: 32px;
+body.admin-bar {
+  $admin_adjust: 46px;
+  padding-top: 0px;
 
-  .admin-bar .navbar-fixed-top{
-    top: 0px;
+  nav.navbar-fixed-top{
+    top: 0;
+    position: fixed;
     border-top: 3px red solid;
+  }
+
+  main#content-wrapper {
+    padding-top: 25px;
   }
 }
 
@@ -133,7 +149,7 @@ nav .sub-menu li:hover a {
 /*-- Front Page (Landing Page) - Style  --*/
 
 main.front-page{
-  background: url('../images/bg-double-derrick.png') 0% 100% no-repeat;
+  background: url('../images/bg-double-derrick.png') 50% 100% no-repeat fixed;
   background-size: cover;
 }
 .fp-content-area {
@@ -153,15 +169,24 @@ main.front-page{
 
 .front-page-slider .carousel-caption{
     background: rgba(100,100,100,.8);
-    width: 200px;
-    height: 50px;
-    text-align: center;
-    padding: 15px;
-
+    width: 360px;
+    height: 70px;
+    text-align: left;
+    padding: 30px 10px;
     top: 10%;
     left: 15%;
 
+  > span{
+    position: absolute;
+    display: block;
+    text-align: center;
+    top: 50%; left: 00%;
+    width: 100%;
+    transform: translateY(-50%);
+    font-size: 21px;
+    font-weight: 200;
   }
+ }
 
 
 
@@ -262,8 +287,6 @@ aside.comment:nth-of-type(2n){
       background: transparentize($light_gray, .4);
       transition: all .18s;
     }
-
-
   }
 }
 
@@ -298,8 +321,8 @@ aside.comment:nth-of-type(2n){
   padding: 10px; background: #eee;
 }
 
-/*---Services Page---*/
 
+/*---Services Page---*/
 .services-summary ul {
   padding-left: 30px;
   li {
@@ -344,7 +367,7 @@ ul.footer-menu-list{
 /*--- Med-Screen+ Styles  ---*/
 
 @media screen and (min-width: 768px) {  
-
+  
   /*-------------*/
   /*-------------*/
   
@@ -374,18 +397,10 @@ ul.footer-menu-list{
 
   
   /*styles for navbar*/
-  
-  .admin-bar .navbar-fixed-top{
-    top: 32px;
-    border-top: 3px red solid;
-  }
-
-
-
   nav.navbar {
-  background: $white;
-  padding: 15px;
-  border-bottom: #333 solid 2px;
+    background: $white;
+    padding: 15px;
+    border-bottom: #333 solid 2px;
   }
 
   nav .navbar-brand {
@@ -472,7 +487,15 @@ ul.footer-menu-list{
       }
   }
 
+  /*Admin aBar*/
+  body.admin-bar {
+    padding-top: 30px;
+    .navbar-fixed-top{
+      top: 32px;
+      border-top: 3px red solid;
 
+    }
+  }
 
 }
 

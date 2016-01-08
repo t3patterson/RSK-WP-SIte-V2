@@ -23,22 +23,24 @@
         <div class="carousel-inner" role="listbox">
         
             <div class="item active" >
-              <div style="background: url('<?php bloginfo('template_directory');?>/images/barrel_1024.jpg') 0% 0% no-repeat; 
+              <div style="background: url('<?php bloginfo('template_directory');?>/images/slider-images/stock-photo-new-york-city-september-view-from-federal-hall-of-pedestrians-walking-along-broad-and-221607850.jpg') 0% 0% no-repeat; 
                         background-size: cover;
                         position: absolute; top: 0; left: 0; width: 100%; height: 100%"></div>
-              <div class="carousel-caption">Barrels</div>
+              <div class="carousel-caption">
+                <span>Superior Management Consulting</span>
+              </div>
             </div>
             <div class="item">
-              <div style="background: url('<?php bloginfo('template_directory');?>/images/worker_1024.jpg') 0% 0% no-repeat; 
+              <div style="background: url('<?php bloginfo('template_directory');?>/images/slider-images/stock-photo-midsection-of-business-people-shaking-hands-in-conference-room-143069182.jpg') 0% 0% no-repeat; 
                         background-size: cover;
                         position: absolute; top: 0; left: 0; width: 100%; height: 100%"></div>
-              <div class="carousel-caption">Work</div>
+              <div class="carousel-caption"><span>Complex Macro Economic Studies</span></div>
             </div>
             <div class="item">
-              <div style="background: url('<?php bloginfo('template_directory');?>/images/mtns_1024.jpg') 0% 0% no-repeat; 
+              <div style="background: url('<?php bloginfo('template_directory');?>/images/slider-images/stock-photo-drilling-rig-operating-in-north-american-wilderness-121360270.jpg') 0% 0% no-repeat; 
                         background-size: cover;
                         position: absolute; top: 0; left: 0; width: 100%; height: 100%"></div>
-              <div class="carousel-caption">More Work</div>
+              <div class="carousel-caption"><span>400+ Global Projects</span></div>
             </div>
            
         </div>

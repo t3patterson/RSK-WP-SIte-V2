@@ -2,8 +2,8 @@
 <?php /* Template Name: Portfolio Grid Template*/ ?>
 
 <?php get_header(); ?>
-<main id="content-wrapper">
-  <div class="container" id="projects-portfolio">
+<main id="content-wrapper" id="projects-portfolio">
+  <div class="container" >
     <div class="row">
       <div class="col-xs-12">
         <?php if (have_posts()) { 

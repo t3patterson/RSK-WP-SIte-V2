@@ -19,14 +19,26 @@ html, body {
 body {
   font-family: 'Helvetica Neue', 'Helvetica', 'sans-serif'; }
 
+main {
+  background: url("../images/bg-single-derrick.png") 0% 100% no-repeat fixed;
+  background-size: cover; }
+  main > .container,
+  main > .container-fluid {
+    background: #fff; }
+
 /*Universal Mobile*/
 main#content-wrapper {
   padding-top: 66px; }
 
 /*--- PHP-Wordpress Admin Styles  ---*/
-body.admin-bar .admin-bar .navbar-fixed-top {
-  top: 0px;
-  border-top: 3px red solid; }
+body.admin-bar {
+  padding-top: 0px; }
+  body.admin-bar nav.navbar-fixed-top {
+    top: 0;
+    position: fixed;
+    border-top: 3px red solid; }
+  body.admin-bar main#content-wrapper {
+    padding-top: 25px; }
 
 /*--- Colors  ---*/
 /*--- App Styles  ---*/
@@ -88,7 +100,7 @@ nav .sub-menu li:hover a {
 
 /*-- Front Page (Landing Page) - Style  --*/
 main.front-page {
-  background: url("../images/bg-double-derrick.png") 0% 100% no-repeat;
+  background: url("../images/bg-double-derrick.png") 50% 100% no-repeat fixed;
   background-size: cover; }
 
 .fp-content-area {
@@ -105,12 +117,22 @@ main.front-page {
 
 .front-page-slider .carousel-caption {
   background: rgba(100, 100, 100, 0.8);
-  width: 200px;
-  height: 50px;
-  text-align: center;
-  padding: 15px;
+  width: 360px;
+  height: 70px;
+  text-align: left;
+  padding: 30px 10px;
   top: 10%;
   left: 15%; }
+  .front-page-slider .carousel-caption > span {
+    position: absolute;
+    display: block;
+    text-align: center;
+    top: 50%;
+    left: 00%;
+    width: 100%;
+    transform: translateY(-50%);
+    font-size: 21px;
+    font-weight: 200; }
 
 /*.front-page-slider .item:nth-of-type(1) .carousel-caption {
   top: 10%;
@@ -259,10 +281,6 @@ ul.footer-menu-list {
     height: 120px; }
 
   /*styles for navbar*/
-  .admin-bar .navbar-fixed-top {
-    top: 32px;
-    border-top: 3px red solid; }
-
   nav.navbar {
     background: white;
     padding: 15px;
@@ -335,6 +353,13 @@ ul.footer-menu-list {
     text-align: right; }
     ul.footer-menu-list > * {
       display: inline-block;
-      padding: 6px; } }
+      padding: 6px; }
+
+  /*Admin aBar*/
+  body.admin-bar {
+    padding-top: 30px; }
+    body.admin-bar .navbar-fixed-top {
+      top: 32px;
+      border-top: 3px red solid; } }
 
 /*# sourceMappingURL=style.css.map */
