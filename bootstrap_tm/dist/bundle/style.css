@@ -177,31 +177,39 @@ aside.comment:nth-of-type(2n) {
   background: #fafafa; }
 
 /*---page-portfolio.php...Portfolio-Piece---*/
-#projects-portfolio .portfolio-piece {
+main.projects-portfolio .portfolio-piece {
   position: relative;
   text-align: center;
   padding: 3%; }
-  #projects-portfolio .portfolio-piece a {
-    color: #323232; }
-    #projects-portfolio .portfolio-piece a:hover img {
-      transform: scale(1.5, 1.5); }
-    #projects-portfolio .portfolio-piece a:hover .label-container {
-      background: #f3d67b; }
-  #projects-portfolio .portfolio-piece .img-container {
-    overflow: hidden;
-    width: 100%; }
-    #projects-portfolio .portfolio-piece .img-container img {
+  main.projects-portfolio .portfolio-piece .scale-on-hover {
+    position: relative; }
+    main.projects-portfolio .portfolio-piece .scale-on-hover a {
+      color: #333; }
+      main.projects-portfolio .portfolio-piece .scale-on-hover a:hover img {
+        transform: scale(1.5, 1.5); }
+      main.projects-portfolio .portfolio-piece .scale-on-hover a:hover .label-container {
+        background: #f3d67b;
+        color: #323232; }
+    main.projects-portfolio .portfolio-piece .scale-on-hover .img-container {
+      display: absolute;
+      z-index: 1;
+      overflow: hidden;
+      width: 100%; }
+      main.projects-portfolio .portfolio-piece .scale-on-hover .img-container img {
+        width: 100%;
+        transition: all .18s; }
+    main.projects-portfolio .portfolio-piece .scale-on-hover .label-container {
+      position: absolute;
+      z-index: 2;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 0%;
       width: 100%;
-      transition: all .18s; }
-  #projects-portfolio .portfolio-piece .label-container {
-    position: absolute;
-    top: 50%;
-    left: 3%;
-    transform: translateY(-50%);
-    width: 94%;
-    height: 100px;
-    background: rgba(225, 225, 225, 0.6);
-    transition: all .18s; }
+      height: 100px;
+      background: #e1e1e1;
+      color: #323232;
+      transition: all .18s;
+      text-align: center; }
 
 /*---single-portfolio.php...Portfolio-Piece---*/
 .single-portfolio h1,

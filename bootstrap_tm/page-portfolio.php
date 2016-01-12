@@ -2,7 +2,7 @@
 <?php /* Template Name: Portfolio Grid Template*/ ?>
 
 <?php get_header(); ?>
-<main id="content-wrapper" id="projects-portfolio">
+<main id="content-wrapper" class="projects-portfolio">
   <div class="container" >
     <div class="row">
       <div class="col-xs-12">
@@ -39,17 +39,17 @@
               $tn_url = wp_get_attachment_image_src($tn_id, 'thumbnail-size',true);
       ?>
 
-      <div class="col-sm-4 col-md-3 ">
-        <div class="portfolio-piece">
-          <a href="<?php the_permalink(); ?>" >
-              <div class="img-container"><img src="<?php echo $tn_url[0]; ?> " alt="<?php the_title(); ?>"></div>
-              <div class="label-container">
-                <h3><?php the_title(); ?></h3>
-                <h5><?php echo get_post_meta($post_id, 'subtitle', true); ?></h5>
-                <!--<p>Extra Information</p>-->
-              </div>
-          </a>
-        </div>
+      <div class="col-sm-4 col-md-3 portfolio-piece">
+          <div class="scale-on-hover">
+            <a href="<?php the_permalink(); ?>" >
+                <div class="img-container"><img src="<?php echo $tn_url[0]; ?> " alt="<?php the_title(); ?>"></div>
+                <div class="label-container">
+                  <h3><?php the_title(); ?></h3>
+                  <h5><?php echo get_post_meta($post_id, 'subtitle', true); ?></h5>
+                  <!--<p>Extra Information</p>-->
+                </div>
+            </a>
+          </div>
       </div>
       <?php }} ?>
     </div>
