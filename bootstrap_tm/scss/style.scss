@@ -1,9 +1,18 @@
 @import url('bootstrap.min.css');
 
-/*---------------------*/
-/*---  Universal Styles ---*/
+/*--- Colors  ---*/
+$white: rgba(255,255,255,1);
+$light_gray: rgba(225,225,225,1);
+$med_gray: rgba(185,185,185,1);
+$dark_gray: rgba(91,91,91,1);
+$charcoal: rgba(50,50,50,1);
+$primary_color: rgba(255,198,0,1);
+$secondary_color: rgba(243,214,123,1);
+
 /*---------------------*/
 
+/*---  Universal Styles ---*/
+/*---------------------*/
 
 *, *:before, *:after{
   box-sizing: border-box;
@@ -37,10 +46,23 @@ main {
   }
 }
 
-/*Universal Mobile*/
+/*----------------*/
+/* Universal */
+/*-----------------*/
 $main_content_top_padding__mobile: 66px;
 
 main#content-wrapper {
+  .page-header{
+    margin: 0 -15px;
+    border-bottom: 0px;
+
+    h1 { 
+      margin: 0;
+      padding: 7px;
+      background: $primary_color;
+      color: $white;
+    }
+  }
   padding-top: $main_content_top_padding__mobile;
 }
 
@@ -60,16 +82,6 @@ body.admin-bar {
     padding-top: 25px;
   }
 }
-
-
-/*--- Colors  ---*/
-$white: rgba(255,255,255,1);
-$light_gray: rgba(225,225,225,1);
-$med_gray: rgba(185,185,185,1);
-$dark_gray: rgba(91,91,91,1);
-$charcoal: rgba(50,50,50,1);
-$primary_color: rgba(255,198,0,1);
-$secondary_color: rgba(243,214,123,1);
 
 
 /*--- App Styles  ---*/
@@ -169,12 +181,13 @@ main.front-page{
 
 .front-page-slider .carousel-caption{
     background: rgba(100,100,100,.8);
-    width: 360px;
+    width: 300px;
     height: 70px;
     text-align: left;
-    padding: 30px 10px;
-    top: 10%;
-    left: 15%;
+    padding: 15px 8px;
+    top: 5%;
+    left: 50%;
+    transform: translateX(-50%);
 
   > span{
     position: absolute;
@@ -380,34 +393,19 @@ ul.footer-menu-list{
 
 @media screen and (min-width: 768px) {  
   
-  /*-------------*/
-  /*-------------*/
-  
-  $sticky_footer_size: 120px;
+  /*----------------*/
+  /* Universal Med PLUS */
+  /*-----------------*/
+ $sticky_footer_size: 120px;
 
-  body.admin-bar {
-    $admin_adjust: 32px;
-
-    main#content-wrapper{
-      margin-bottom: -$sticky_footer_size - $admin_adjust;
-    }
-
-  #sticky-foot-push {
-    height: $sticky_footer_size + $admin_adjust;
-    }
-  }
-  
   main#content-wrapper {
+    $main_content_top_padding__normal: 87px;
+    padding-top: 87px;    
+    /*Sticky Footer*/
     min-height: 100%;
     margin-bottom: -$sticky_footer_size;
   }
 
-  #sticky-foot-push {
-    /*__ sticky footer __*/
-    height: $sticky_footer_size;
-  }
-
-  
   /*styles for navbar*/
   nav.navbar {
     background: $white;
@@ -476,6 +474,28 @@ ul.footer-menu-list{
     height: 400px;
   }
 
+   .front-page-slider .carousel-caption{
+      background: rgba(100,100,100,.8);
+      width: 360px;
+      height: 70px;
+      text-align: left;
+      padding: 10px 10px;
+      top: 10%;
+      left: 15%;
+      transform: translateX(0);
+
+    > span{
+      position: absolute;
+      display: block;
+      text-align: center;
+      top: 50%; left: 00%;
+      width: 100%;
+      transform: translateY(-50%);
+      font-size: 21px;
+      font-weight: 200;
+    }
+   }
+
 
   .single-portfolio .feature-image img{
     width: 100%;
@@ -486,6 +506,11 @@ ul.footer-menu-list{
   /* ---------------- */
   /* --- footer ---- */
   /* ---------------- */
+  
+  #sticky-foot-push {
+    /*__ sticky footer __*/
+    height: $sticky_footer_size;
+  }
 
   footer {
     height: $sticky_footer_size;
@@ -498,14 +523,25 @@ ul.footer-menu-list{
         padding: 6px;
       }
   }
-
-  /*Admin aBar*/
+  /* ================== */
+  /* ---  Admin aBar  --- */
   body.admin-bar {
+    $admin_adjust: 32px;
+
     padding-top: 30px;
+
+    main#content-wrapper{
+      margin-bottom: -$sticky_footer_size - $admin_adjust;
+    }
+
+
     .navbar-fixed-top{
       top: 32px;
       border-top: 3px red solid;
 
+    }
+    #sticky-foot-push {
+    height: $sticky_footer_size + $admin_adjust;
     }
   }
 

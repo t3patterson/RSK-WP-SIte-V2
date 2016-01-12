@@ -1,4 +1,5 @@
 @import url("bootstrap.min.css");
+/*--- Colors  ---*/
 /*---------------------*/
 /*---  Universal Styles ---*/
 /*---------------------*/
@@ -26,9 +27,19 @@ main {
   main > .container-fluid {
     background: #fff; }
 
-/*Universal Mobile*/
+/*----------------*/
+/* Universal */
+/*-----------------*/
 main#content-wrapper {
   padding-top: 66px; }
+  main#content-wrapper .page-header {
+    margin: 0 -15px;
+    border-bottom: 0px; }
+    main#content-wrapper .page-header h1 {
+      margin: 0;
+      padding: 7px;
+      background: #ffc600;
+      color: white; }
 
 /*--- PHP-Wordpress Admin Styles  ---*/
 body.admin-bar {
@@ -40,7 +51,6 @@ body.admin-bar {
   body.admin-bar main#content-wrapper {
     padding-top: 25px; }
 
-/*--- Colors  ---*/
 /*--- App Styles  ---*/
 /*-- Multipage--Sidebar --*/
 .sidebar {
@@ -117,12 +127,13 @@ main.front-page {
 
 .front-page-slider .carousel-caption {
   background: rgba(100, 100, 100, 0.8);
-  width: 360px;
+  width: 300px;
   height: 70px;
   text-align: left;
-  padding: 30px 10px;
-  top: 10%;
-  left: 15%; }
+  padding: 15px 8px;
+  top: 5%;
+  left: 50%;
+  transform: translateX(-50%); }
   .front-page-slider .carousel-caption > span {
     position: absolute;
     display: block;
@@ -273,20 +284,14 @@ ul.footer-menu-list {
 
 /*--- Med-Screen+ Styles  ---*/
 @media screen and (min-width: 768px) {
-  /*-------------*/
-  /*-------------*/
-  body.admin-bar main#content-wrapper {
-    margin-bottom: -152px; }
-  body.admin-bar #sticky-foot-push {
-    height: 152px; }
-
+  /*----------------*/
+  /* Universal Med PLUS */
+  /*-----------------*/
   main#content-wrapper {
+    padding-top: 87px;
+    /*Sticky Footer*/
     min-height: 100%;
     margin-bottom: -120px; }
-
-  #sticky-foot-push {
-    /*__ sticky footer __*/
-    height: 120px; }
 
   /*styles for navbar*/
   nav.navbar {
@@ -346,6 +351,26 @@ ul.footer-menu-list {
     border-bottom: 30px #ffc600 solid;
     height: 400px; }
 
+  .front-page-slider .carousel-caption {
+    background: rgba(100, 100, 100, 0.8);
+    width: 360px;
+    height: 70px;
+    text-align: left;
+    padding: 10px 10px;
+    top: 10%;
+    left: 15%;
+    transform: translateX(0); }
+    .front-page-slider .carousel-caption > span {
+      position: absolute;
+      display: block;
+      text-align: center;
+      top: 50%;
+      left: 00%;
+      width: 100%;
+      transform: translateY(-50%);
+      font-size: 21px;
+      font-weight: 200; }
+
   .single-portfolio .feature-image img {
     width: 100%;
     max-width: 512px;
@@ -354,6 +379,10 @@ ul.footer-menu-list {
   /* ---------------- */
   /* --- footer ---- */
   /* ---------------- */
+  #sticky-foot-push {
+    /*__ sticky footer __*/
+    height: 120px; }
+
   footer {
     height: 120px; }
 
@@ -363,11 +392,16 @@ ul.footer-menu-list {
       display: inline-block;
       padding: 6px; }
 
-  /*Admin aBar*/
+  /* ================== */
+  /* ---  Admin aBar  --- */
   body.admin-bar {
     padding-top: 30px; }
+    body.admin-bar main#content-wrapper {
+      margin-bottom: -152px; }
     body.admin-bar .navbar-fixed-top {
       top: 32px;
-      border-top: 3px red solid; } }
+      border-top: 3px red solid; }
+    body.admin-bar #sticky-foot-push {
+      height: 152px; } }
 
 /*# sourceMappingURL=style.css.map */
